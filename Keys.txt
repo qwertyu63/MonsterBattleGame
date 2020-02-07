@@ -1,0 +1,4 @@
+0 Null 0
+1 Brass_Star 1
+2 Silver_Ring 1
+3 Roxy 0

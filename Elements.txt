@@ -1,0 +1,10 @@
+1 Normal 9
+2 Fire 3 10
+3 Grass 4 6
+4 Water 2 6
+5 Wind 3 8
+6 Stone 2 7 10
+7 Lightning 4 5
+8 Fighting 1 10
+9 Psychic 8
+10 Ice 3 6 5

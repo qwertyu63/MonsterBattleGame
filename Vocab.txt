@@ -1,0 +1,12 @@
+%s, it's your turn.
+%s is knocked out!
+It's a powerful hit!
+You encounter a %s!
+%s was captured!
+The capture failed!
+Your team is full, so %s was sent to storage.
+%s is on point.
+%s can't battle.
+%s is already active.
+%s leveled up!
+%s accepts your challenge!

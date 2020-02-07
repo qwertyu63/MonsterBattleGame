@@ -1,0 +1,56 @@
+"ID" is always the ID of the item. It is not pulled from the file, but generated at runtime. Its placement in the text files is for editor convience only.
+"Name" is the displayed name for the item. In all display name fields except Element and Monster, underscores are replaced with spaces when displayed.
+
+Elements: 1 Normal 9
+ID Name Advantage...
+"Advantage" is the ID of all the elements this one has advantage over.
+
+Locations: 0 Woods 0 5 4 9 | 0 1 2 T0 | 0 4
+ID Name Level Encounters... | Connections... | Lock Master
+"Level" is one less than the level of all enemies in the location (i.e. 0 is Level 1, 1 is Level 2).
+"Encounters" is the ID of all enemies that can be encountered here.
+"Connections" is the ID of all locations that connect to this one. Putting a T before an ID indicates the Town with that ID.
+"Lock" is the ID of the key you need to enter the zone.
+"Master" is the ID of the master here.
+"Lock" and "Master" can be omitted, defaulting to none. If you need a "Master" but no "Lock", set "Lock" to 0.
+
+Monsters: 0 Brinesnare 3 8 2 2 4 4 4 5 1
+ID Name Element HP PhA PhD SpA SpD Moves...
+"Element" is the ID of the monsters element.
+"HP PhA PhD SpA SpD" is the monsters stats, matching the labels.
+"Moves" is the ID of all of the monsters moves.
+
+Moves: 0 Tackle 1 1 4
+ID Name Element Category Power
+"Element" is the ID of the moves element.
+"Category" indicates if the move is physical (1) or special (2).
+"Power" is the base power of the move.
+
+Towns: T0 Ushiport T0 0 2 | 3
+ID Name Connections... | Master
+"Connections" is the ID of all locations that connect to this one. Putting a T before an ID indicates the Town with that ID.
+Master" is the ID of the master here.
+"Master" can be omitted, defaulting to none.
+
+Keys: 1 Brass Star 1
+ID Name Item?
+"Item" indicates if the Key is a object that should be displayed in the inventory; 1 if yes, 0 if no. If 0, the Name should be the same as the master that gives it.
+The Key with the ID 0 can not be awarded. It is a placeholder.
+
+Masters: M0 Fire_Lord 1 1 | 1 7 14
+ID Name Key Level | Team
+"Key" is the Key this master gives when defeated. Set to 0 if they don't give any Key.
+"Level" is the level of the Master's monsters.
+"Team" is the ID of all of the Master's monsters, in the order they will be fought.
+
+----------------------
+
+Messages:
+When a town is entered, the message on the line matching the town's ID will be displayed.
+
+Vocab:
+Messages in this file will be displayed at various times. Read and edit carefully.
+
+Scripts:
+If you know some Python, you can add scripts to be called when the player enters specific routes. Everytime the player moves, the function script() is called, with the ID of the route they moved to passed in as "route". Add an "if" block to detect the ID you care about.
+If they aren't in a town, the ID passed in as Integer. If they are in a town, the ID is passed in as a String.
