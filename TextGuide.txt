@@ -54,3 +54,14 @@ Messages in this file will be displayed at various times. Read and edit carefull
 Scripts:
 If you know some Python, you can add scripts to be called when the player enters specific routes. Everytime the player moves, the function script() is called, with the ID of the route they moved to passed in as "route". Add an "if" block to detect the ID you care about.
 If they aren't in a town, the ID passed in as Integer. If they are in a town, the ID is passed in as a String.
+Adding or removing numbers from the list "keys" gives/takes away the key with that ID.
+
+Starting Save:
+Start.txt is the starting save file. That is, when the player starts the game, this is the file that loads.
+
+The "x" at the start of each line is important.
+
+The first line is the ID of the town they start in.
+The second line is the ID of the monster(s) they start with.
+The third and fourth lines should be all zeroes, one per starting monster. They store the level and XP of the starting monsters.
+Lines 5, 6 and 7 should just be an "x". They note any monsters in storage.
